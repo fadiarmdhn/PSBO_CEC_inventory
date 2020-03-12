@@ -10,4 +10,12 @@ class AdminController extends Controller
     {
         return view('admin.dashboard');
     }
+    public function salesdaily()
+    {
+        return view('admin.salesdaily');
+    }
+    public function salesweekly()
+    {
+        return view('admin.salesweekly');
+    }
 }

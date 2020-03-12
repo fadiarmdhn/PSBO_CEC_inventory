@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', 'AdminController@dashboard'); 
+Route::get('/dashboard', 'AdminController@dashboard');
+Route::get('/salesdaily', 'AdminController@salesdaily');
+Route::get('/salesweekly', 'AdminController@salesweekly');
