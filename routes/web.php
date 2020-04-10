@@ -18,6 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', 'AdminController@dashboard');
+Route::get('/additems', 'AdminController@addItems');
+Route::get('/addcategory', 'AdminController@addcategory');
 Route::get('/salesdaily', 'AdminController@salesdaily');
 Route::get('/salesweekly', 'AdminController@salesweekly');
-Route::get('/login', 'AdminController@login');
+Route::get('/cashbook', 'AdminController@cashbook');
+Route::get('/solditems', 'AdminController@solditems');

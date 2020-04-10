@@ -10,6 +10,17 @@ class AdminController extends Controller
     {
         return view('admin.dashboard');
     }
+
+    public function addItems()
+    {
+        return view('admin.addItems');
+    }
+
+    public function addcategory()
+    {
+        return view('admin.addcategory');
+    }
+
     public function salesdaily()
     {
         return view('admin.salesdaily');
@@ -18,8 +29,14 @@ class AdminController extends Controller
     {
         return view('admin.salesweekly');
     }
-    public function login()
+
+    public function cashbook()
     {
-        return view('admin.login');
+        return view('admin.cashbook');
+    }
+
+    public function solditems()
+    {
+        return view('admin.solditems');
     }
 }
