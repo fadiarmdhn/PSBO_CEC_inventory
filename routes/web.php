@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', 'AdminController@login');
 Route::get('/dashboard', 'AdminController@dashboard');
 Route::get('/additems', 'AdminController@addItems');
 Route::get('/addcategory', 'AdminController@addcategory');

@@ -96,10 +96,10 @@
 
                 <ul class="list-sidebar">
                     <li>
-                        <a  href="#">Dashboard</a> 
+                        <a  href="#">Dashboard</a>
                     </li>
                     <li>
-                        <a  href="#">Items and Category</a> 
+                        <a  href="#">Items and Category</a>
                     </li>
                     <li>
                         <a  href="#sales-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sales</a>
@@ -112,10 +112,10 @@
                             </li>
                     </li>
                     <li>
-                        <a  href="#">Sold Items</a> 
+                        <a  href="#">Sold Items</a>
                     </li>
                     <li>
-                        <a  href="#">Cash Book</a> 
+                        <a  href="#">Cash Book</a>
                     </li>
                 </ul>
             </nav>

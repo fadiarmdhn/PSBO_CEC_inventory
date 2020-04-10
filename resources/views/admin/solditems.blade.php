@@ -78,7 +78,7 @@
                       <div class="row">
                         <div class="col-5">
                           <label>Name</label>
-                          <input type="number" class="form-control" placeholder="Enter name" required>
+                          <input type="text" class="form-control" placeholder="Enter name" required>
                         </div>
                       </div>
                     </div>
@@ -97,7 +97,7 @@
                 </div>
                 </div>
               </form>
-        
+
         <div class="card card-warning">
         <div class="card-header">
             <h3 class="card-title">Tabel Items</h3>
