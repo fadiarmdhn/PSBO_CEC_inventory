@@ -25,3 +25,4 @@ Route::get('/salesdaily', 'AdminController@salesdaily');
 Route::get('/salesweekly', 'AdminController@salesweekly');
 Route::get('/cashbook', 'AdminController@cashbook');
 Route::get('/solditems', 'AdminController@solditems');
+Route::get('/allitems', 'AdminController@allitems');

@@ -43,4 +43,9 @@ class AdminController extends Controller
     {
         return view('admin.solditems');
     }
+
+    public function allitems()
+    {
+        return view('admin.allitems');
+    }
 }
