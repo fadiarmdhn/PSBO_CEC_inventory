@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('/dashboard', 'AdminController@dashboard');
 Route::get('/salesdaily', 'AdminController@salesdaily');
 Route::get('/salesweekly', 'AdminController@salesweekly');
+Route::get('/login', 'AdminController@login');

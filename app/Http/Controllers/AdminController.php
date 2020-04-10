@@ -18,4 +18,8 @@ class AdminController extends Controller
     {
         return view('admin.salesweekly');
     }
+    public function login()
+    {
+        return view('admin.login');
+    }
 }
