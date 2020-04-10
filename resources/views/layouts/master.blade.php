@@ -200,11 +200,7 @@
                 </a>
               </li>
               <li class="nav-item">
-<<<<<<< HEAD
-                <a href="#" class="nav-link">
-=======
                 <a href="/category" class="nav-link">
->>>>>>> 1745724221a669afd2b6ac64c3d6a86b1bbf5b1f
                   <i class="far fa-circle nav-icon"></i>
                   <p>Category</p>
                 </a>
@@ -227,11 +223,7 @@
                 </a>
               </li>
               <li class="nav-item">
-<<<<<<< HEAD
-                <a href="salesweekly" class="nav-link">
-=======
                 <a href="/salesweekly" class="nav-link">
->>>>>>> 1745724221a669afd2b6ac64c3d6a86b1bbf5b1f
                   <i class="far fa-circle nav-icon"></i>
                   <p>Weekly</p>
                 </a>
@@ -239,11 +231,7 @@
             </ul>
           </li>
           <li class="nav-item">
-<<<<<<< HEAD
-            <a href="#" class="nav-link">
-=======
             <a href="/solditems" class="nav-link">
->>>>>>> 1745724221a669afd2b6ac64c3d6a86b1bbf5b1f
               <i class="nav-icon fas fa-cash-register"></i>
               <p>
                 Sold items
@@ -251,11 +239,7 @@
             </a>
           </li>
           <li class="nav-item">
-<<<<<<< HEAD
-            <a href="#" class="nav-link">
-=======
             <a href="/cashbook" class="nav-link">
->>>>>>> 1745724221a669afd2b6ac64c3d6a86b1bbf5b1f
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Cash book
@@ -299,16 +283,6 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/AdminCEC/js/demo.js"></script>
 <!-- PAGE PLUGINS -->
-<<<<<<< HEAD
-<!-- jQuery Mapael -->
-<script src="/AdminCEC/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
-<script src="/AdminCEC/plugins/raphael/raphael.min.js"></script>
-<script src="/AdminCEC/plugins/jquery-mapael/jquery.mapael.min.js"></script>
-<script src="/AdminCEC/plugins/jquery-mapael/maps/usa_states.min.js"></script>
-<!-- ChartJS -->
-<script src="/AdminCEC/plugins/chart.js/Chart.min.js"></script>
-
-=======
 <!-- ChartJS -->
 <script src="/AdminCEC/plugins/chart.js/Chart.min.js"></script>
 
@@ -316,7 +290,6 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="/AdminCEC/js/upload.js"></script>
 
->>>>>>> 1745724221a669afd2b6ac64c3d6a86b1bbf5b1f
 <!-- PAGE SCRIPTS -->
 <script src="/AdminCEC/js/pages/dashboard2.js"></script>
 </body>
