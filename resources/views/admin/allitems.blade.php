@@ -22,15 +22,36 @@
    <!-- /.content-header -->
 
    <!-- Main content -->
-   <li class="nav-item has-treeview">
-        <a>
-            <div style="margin-left:20px;text-align:left;">
-            <h>Add Item or Category</h>
-            </div>
-        </a>
-        <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/additems" class="nav-link">
+   <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview" >
+            <a class="nav-link" style="padding-right:20px;text-align:right;">
+              <p>
+              Add Item or Category
+              <i><svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg" >
+            <g filter="url(#filter0_d)">
+            <circle cx="22.5" cy="18.5" r="18.5" fill="#C4C4C4"/>
+            </g>
+            <path d="M30.1847 19.9231C30.1847 20.6313 30.1232 21.2038 29.4149 21.2038H23.7808V26.838C23.7808 27.5449 23.2083 27.6077 22.5 27.6077C21.7918 27.6077 21.2193 27.5449 21.2193 26.838V21.2038H15.5852C14.8782 21.2038 14.8154 20.6313 14.8154 19.9231C14.8154 19.2148 14.8782 18.6423 15.5852 18.6423H21.2193V13.0082C21.2193 12.2999 21.7918 12.2385 22.5 12.2385C23.2083 12.2385 23.7808 12.2999 23.7808 13.0082V18.6423H29.4149C30.1232 18.6423 30.1847 19.2148 30.1847 19.9231Z" fill="black"/>
+            <defs>
+            <filter id="filter0_d" x="0" y="0" width="45" height="45" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            </defs>
+            </svg></i>
+            </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item" style="padding-right:110px;text-align:right;">
+              <a href="/additems" class="nav-link">
                 <div>
                 <svg width="25" height="25" viewBox="0 0 60 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M39.9108 21.503C38.3266 21.503 36.836 20.6392 36.0298 19.2571L30.0021 9.02563L23.9837 19.2571C23.1681 20.6488 21.6776 21.5126 20.0933 21.5126C19.6715 21.5126 19.2496 21.455 18.8465 21.3302L6.00359 17.5678V34.6522C6.00359 36.0631 6.94103 37.2916 8.2722 37.6275L28.5397 42.82C29.4959 43.06 30.4989 43.06 31.4457 42.82L51.732 37.6275C53.0631 37.282 54.0006 36.0535 54.0006 34.6522V17.5678L41.1576 21.3206C40.7545 21.4454 40.3327 21.503 39.9108 21.503ZM59.8408 10.7341L55.013 0.867364C54.7224 0.272291 54.0943 -0.073236 53.4475 0.0131456L30.0021 3.07489L38.5984 17.6734C38.9546 18.2781 39.6671 18.566 40.3327 18.374L58.8846 12.9512C59.8127 12.6729 60.2627 11.6171 59.8408 10.7341ZM4.99115 0.867364L0.163333 10.7341C-0.26789 11.6171 0.191456 12.6729 1.11015 12.9416L19.6621 18.3644C20.3277 18.5564 21.0401 18.2685 21.3964 17.6638L30.0021 3.07489L6.54731 0.0131456C5.90047 -0.063638 5.28176 0.272291 4.99115 0.867364Z" fill="black"/>
@@ -39,8 +60,8 @@
                 </div>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="/addcategory" class="nav-link">
+              <li class="nav-item" style="padding-right:80px;text-align:right;">
+              <a href="/addcategory" class="nav-link">
                 <svg width="25" height="25" viewBox="0 0 55 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M51.9834 0H35.7511C34.6365 0 33.0755 0.639851 32.2882 1.41892L12.1628 21.3346C11.7834 21.7119 11.5703 22.2226 11.5703 22.7549C11.5703 23.2872 11.7834 23.7979 12.1628 24.1751L29.5828 41.4137C29.9641 41.7892 30.4801 42 31.018 42C31.5559 42 32.072 41.7892 32.4532 41.4137L52.5786 21.4979C53.3685 20.7162 54.0124 19.1741 54.0124 18.0711V2.0079C54.011 1.47581 53.7968 0.965911 53.4165 0.589662C53.0363 0.213413 52.5211 0.00141327 51.9834 0V0ZM41.8382 16.0632C41.3051 16.063 40.7773 15.959 40.2848 15.7569C39.7924 15.5549 39.345 15.2588 38.9681 14.8857C38.5913 14.5125 38.2924 14.0696 38.0886 13.5821C37.8848 13.0947 37.7799 12.5723 37.7801 12.0447C37.7803 11.5172 37.8855 10.9949 38.0896 10.5075C38.2938 10.0202 38.593 9.57748 38.97 9.20458C39.3471 8.83168 39.7947 8.53592 40.2873 8.33421C40.7799 8.13249 41.3078 8.02876 41.8409 8.02893C42.9175 8.02929 43.9499 8.45286 44.7109 9.20647C45.472 9.96008 45.8993 10.982 45.899 12.0474C45.8986 13.1128 45.4706 14.1345 44.709 14.8876C43.9475 15.6407 42.9148 16.0636 41.8382 16.0632Z" fill="black"/>
                 <path d="M5.31551 22.7562L28.3113 0H24.9295C23.8149 0 22.2539 0.639851 21.4667 1.41892L1.3413 21.3346C0.961819 21.7119 0.748779 22.2226 0.748779 22.7549C0.748779 23.2872 0.961819 23.7979 1.3413 24.1751L18.7613 41.4137C19.1425 41.7892 19.6586 42 20.1965 42C20.7344 42 21.2504 41.7892 21.6317 41.4137L22.9032 40.1554L5.31821 22.7535L5.31551 22.7562Z" fill="black"/>
@@ -48,8 +69,9 @@
                 <h>Add Category</h>
                 </a>
               </li>
-        </ul>
-    </li>
+            </ul>
+          </li>
+      </nav>
     
     <div style="margin-left:20px;">
     <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
