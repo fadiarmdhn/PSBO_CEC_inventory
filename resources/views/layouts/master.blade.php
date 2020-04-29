@@ -53,19 +53,19 @@
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
           <i class="fas fa-th-large"></i>
         </a>
-        </li>
-             <!-- User Account: style can be found in dropdown.less -->
-             <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-              <img src="/AdminCEC/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" height="40" width="40">
-                <span class="hidden-xs">Admin</span>
-              </a>
-                <ul class="dropdown-menu">
-                <div class="card-header">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                  </div>
-                </ul>
-        </li>
+      </li>
+      <!-- User Account: style can be found in dropdown.less -->
+      <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+            <img src="/AdminCEC/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" height="40" width="40">
+              <span class="hidden-xs">Admin</span>
+            </a>
+              <ul class="dropdown-menu">
+              <div class="card-header">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </ul>
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
