@@ -7,6 +7,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="/AdminCEC/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -48,12 +49,23 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-
       <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
           <i class="fas fa-th-large"></i>
         </a>
-      </li>
+        </li>
+             <!-- User Account: style can be found in dropdown.less -->
+             <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+              <img src="/AdminCEC/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" height="40" width="40">
+                <span class="hidden-xs">Admin</span>
+              </a>
+                <ul class="dropdown-menu">
+                <div class="card-header">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </ul>
+        </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -113,6 +125,18 @@
                 <a href="/addcategory" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Category</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('kategori.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kategori</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('produk.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                    <p>Produk</p>
                 </a>
               </li>
             </ul>

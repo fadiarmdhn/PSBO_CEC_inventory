@@ -26,3 +26,9 @@ Route::get('/salesweekly', 'AdminController@salesweekly');
 Route::get('/cashbook', 'AdminController@cashbook');
 Route::get('/solditems', 'AdminController@solditems');
 Route::get('/allitems', 'AdminController@allitems');
+
+Route::resource('/kategori', 'CategoryController')->except([
+    'create', 'show'
+]);
+
+Route::resource('/produk', 'ProductController');
