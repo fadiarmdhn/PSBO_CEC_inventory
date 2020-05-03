@@ -32,3 +32,6 @@ Route::resource('/kategori', 'CategoryController')->except([
 ]);
 
 Route::resource('/produk', 'ProductController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
