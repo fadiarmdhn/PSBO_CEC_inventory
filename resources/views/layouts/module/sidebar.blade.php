@@ -3,7 +3,7 @@
     <a href="{{ route('home') }}" class="brand-link">
         <img src="{{ asset('AdminCEC/img/logobaznaswhite.png') }}" alt="CEC" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">CEC</span>
+        <span class="brand-text font-weight-light"><strong>SCB CEC</strong></span>
     </a>
 
     <div class="sidebar">
@@ -12,7 +12,7 @@
                 <img src="{{ asset('AdminCEC/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Admin</a>
+                <a href="#" class="d-block">{{ auth()->user()->name }}</a>
             </div>
         </div>
 
@@ -27,6 +27,7 @@
                     </a>
                 </li>
 
+                @if (auth()->user()->can('manajemen-produk'))
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-server"></i>
@@ -50,7 +51,9 @@
                         </li>
                     </ul>
                 </li>
+                @endif
 
+                @if (auth()->user()->can('menjalankan-transaksi'))
                 <li class="nav-item">
                     <a href="{{ route('order.transaksi') }}" class="nav-link">
                         <i class="nav-icon fa fa-shopping-cart"></i>
@@ -59,7 +62,9 @@
                         </p>
                     </a>
                 </li>
+                @endif
                 
+                @if (auth()->user()->can('manajemen-order'))
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-shopping-bag"></i>
@@ -77,7 +82,9 @@
                         </li>
                     </ul>
                 </li>
-                
+                @endif
+
+                @if (auth()->user()->can('manajemen-user'))
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-users"></i>
@@ -107,6 +114,7 @@
                         </li>
                     </ul>
                 </li>
+                @endif
                 
                 <li class="nav-item has-treeview">
                     <a class="nav-link" href="{{ route('logout') }}"
