@@ -66,15 +66,21 @@
                                     <p class="text-danger">{{ $errors->first('stock') }}</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Harga</label>
+                                    <label for="">Harga Jual</label>
                                     <input type="number" name="price" required 
                                         class="form-control {{ $errors->has('price') ? 'is-invalid':'' }}">
                                     <p class="text-danger">{{ $errors->first('price') }}</p>
                                 </div>
                                 <div class="form-group">
+                                    <label for="">Harga Beli</label>
+                                    <input type="number" name="purchase" required 
+                                        class="form-control {{ $errors->has('purchase') ? 'is-invalid':'' }}">
+                                    <p class="text-danger">{{ $errors->first('purchase') }}</p>
+                                </div>
+                                <div class="form-group">
                                     <label for="">Kategori</label>
                                     <select name="category_id" id="category_id" 
-                                        required class="form-control {{ $errors->has('price') ? 'is-invalid':'' }}">
+                                        required class="form-control {{ $errors->has('category_id') ? 'is-invalid':'' }}">
                                         <option value="">Pilih</option>
                                         @foreach ($categories as $row)
                                             <option value="{{ $row->id }}">{{ ucfirst($row->name) }}</option>

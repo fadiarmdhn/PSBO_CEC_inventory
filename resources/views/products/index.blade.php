@@ -47,7 +47,8 @@
                                             <th>#</th>
                                             <th>Nama Produk</th>
                                             <th>Stok</th>
-                                            <th>Harga</th>
+                                            <th>Harga Jual</th>
+                                            <th>Harga Beli</th>
                                             <th>Kategori</th>
                                             <th>Last Update</th>
                                             <th>Aksi</th>
@@ -70,6 +71,7 @@
                                             </td>
                                             <td>{{ $row->stock }}</td>
                                             <td>Rp {{ number_format($row->price) }}</td>
+                                            <td>Rp {{ number_format($row->purchase) }}</td>
                                             <td>{{ $row->category->name }}</td>
                                             <td>{{ $row->updated_at }}</td>
                                             <td>

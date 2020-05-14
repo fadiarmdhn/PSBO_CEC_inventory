@@ -154,6 +154,8 @@ class OrderController extends Controller
         $orders = Order::orderBy('created_at', 'DESC')->with('order_detail', 'customer');
         $order_details = Order_detail::orderBy('created_at', 'DESC')->with('order', 'product');
         $products = Product::orderBy('id', 'ASC');
+        $start_date = Carbon::parse($request->start_date)->format('Y-m-d') . ' 00:00:01';
+        $end_date = Carbon::parse($request->end_date)->format('Y-m-d') . ' 23:59:59';
 
         if (!empty($request->customer_id)) {
             $orders = $orders->where('customer_id', $request->customer_id);
@@ -197,7 +199,9 @@ class OrderController extends Controller
             'users' => $users,
             'order_details' => $order_details,
             'qty' => $qty,
-            'products' => $products
+            'products' => $products,
+            'start_date' => $start_date,
+            'end_date' => $end_date
         ]);
     }
 
@@ -247,5 +251,28 @@ class OrderController extends Controller
     public function invoiceExcel($invoice)
     {
         return (new OrderInvoice($invoice))->download('invoice-' . $invoice . '.xlsx');
+    }
+    public function cetakPdf($start_date, $end_date)
+    {
+        
+        //$order = Order::where('invoice', $invoice)
+                //->with('customer', 'order_detail', 'order_detail.product')->first();
+        $order_details = Order_detail::orderBy('created_at', 'DESC')->with('order', 'product');
+        $products = Product::orderBy('id', 'ASC');
+        
+        $order_details = $order_details->whereBetween('created_at', [$start_date, $end_date])->get();
+        $products = $products->whereBetween('created_at', [$start_date, $end_date])->get();
+
+        $qty = array();
+        foreach ($order_details as $row) {
+            $qty[$row->product->name] = 0;
+        }
+        foreach ($order_details as $row) {
+            $qty[$row->product->name] += $row->qty;
+        }
+
+        $pdf = PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif'])
+            ->loadView('orders.report.cetak', compact('start_date', 'end_date', 'products', 'qty'));
+        return $pdf->stream();
     }
 }

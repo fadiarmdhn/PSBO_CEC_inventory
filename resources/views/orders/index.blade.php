@@ -172,33 +172,89 @@
                                     </tbody>
                                 </table>
                             </div>
+                            @slot('footer')
 
+                            @endslot
+                        @endcard
+                    </div>
+
+                    <div class="col-md-12">
+                        @card
+                            @slot('title')
+                            Data Produk
+                            @endslot
                             <div class="table-responsive">
                                 <table class="table table-hover table-bordered">
                                     <thead>
                                         <tr>
+                                            <th>No</th>
                                             <th>Nama Produk</th>
                                             <th>Stok</th>
                                             <th>Terjual</th>
-                                            <th>Harga</th>
-                                            <th>Total</th>
+                                            <th>Harga Jual</th>
+                                            <th>Harga Beli</th>
+                                            <th>Total Penjualan</th>
+                                            <th>Keuntungan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @php 
+                                            $no = 1;
+                                            $totalStock = 0;
+                                            $totalQty = 0;
+                                            $totalPrice = 0;
+                                            $totalPurchase = 0;
+                                            $totaltotalPrice = 0;
+                                            $totaltotalPurchase = 0;
+                                        @endphp
                                         @forelse ($products as $row)
                                         <tr>
+                                            <td>{{ $no++ }}</td>
                                             <td>{{ $row->name }}</td>
                                             <td>{{ $row->stock }}</td>
                                             <td>{{ $qty[$row->name] }}</td>
                                             <td>Rp{{ number_format($row->price) }}</td>
+                                            <td>Rp{{ number_format($row->purchase) }}</td>
                                             <td>Rp{{ number_format($row->price * $qty[$row->name]) }}</td>
+                                            <td>Rp{{ number_format(($row->price - $row->purchase) * $qty[$row->name]) }}</td>
                                         </tr>
+                                        @php
+                                            $totalStock += $row->stock;
+                                            $totalQty += $qty[$row->name];
+                                            $totalPrice += $row->price;
+                                            $totalPurchase += $row->purchase;
+                                            $totaltotalPrice += $row->price * $qty[$row->name];
+                                            $totaltotalPurchase += ($row->price - $row->purchase) * $qty[$row->name];
+                                        @endphp
                                         @empty
                                         <tr>
-                                            <td class="text-center" colspan="7">Tidak ada data transaksi</td>
+                                            <td class="text-center" colspan="8">Tidak ada data transaksi</td>
                                         </tr>
                                         @endforelse
+                                        <tr>
+                                            <th colspan="2">Total</th>
+                                            <td>{{ $totalStock }}</td>
+                                            <td>{{ $totalQty }}</td>
+                                            <td>Rp{{ number_format($totalPrice) }}</td>
+                                            <td>Rp{{ number_format($totalPurchase) }}</td>
+                                            <td>Rp{{ number_format($totaltotalPrice) }}</td>
+                                            <td>Rp{{ number_format($totaltotalPurchase) }}</td>
+                                        </tr>
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th colspan="7"></th>
+                                            <td>
+                                                <a href="{{ route('order.cetak', [ $start_date, $end_date ]) }}" 
+                                                    target="_blank"
+                                                    class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-print"></i>
+                                                    Cetak Laporan
+                                                </a>
+                                            </td>
+                                            
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
 
