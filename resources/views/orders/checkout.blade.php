@@ -39,35 +39,27 @@
                                     Transaksi telah disimpan, Invoice: <strong>#@{{ message }}</strong>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Email</label>
-                                    <input type="text" name="email" 
-                                        v-model="customer.email"
+                                    <label for="">NIS</label>
+                                    <input type="text" name="nis" 
+                                        v-model="customer.nis"
                                         class="form-control" 
                                         @keyup.enter.prevent="searchCustomer"
                                         required
                                         >
-                                    <p>Tekan enter untuk mengecek email.</p>
+                                    <p>Tekan enter untuk mengecek NIS.</p>
                                 </div>
                                 <div v-if="formCustomer">
                                     <div class="form-group">
-                                        <label for="">Nama Pelanggan</label>
+                                        <label for="">Nama Pembeli</label>
                                         <input type="text" name="name" 
                                             v-model="customer.name"
                                             :disabled="resultStatus"
                                             class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Alamat</label>
-                                        <textarea name="address"
-                                            class="form-control"
-                                            :disabled="resultStatus"
-                                            v-model="customer.address"
-                                            cols="5" rows="5" required></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">No Telp</label>
-                                        <input type="text" name="phone" 
-                                            v-model="customer.phone"
+                                        <label for="">Kelas</label>
+                                        <input type="text" name="grade" 
+                                            v-model="customer.grade"
                                             :disabled="resultStatus"
                                             class="form-control" required>
                                     </div>

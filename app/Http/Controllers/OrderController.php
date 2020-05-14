@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Customer;
 use App\Product;
 use App\Order;
+use App\Order_detail;
 use App\User;
 use Cookie;
 use DB;
@@ -76,10 +77,9 @@ class OrderController extends Controller
     public function storeOrder(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|email',
+            'nis' => 'required|string|max:20',
             'name' => 'required|string|max:100',
-            'address' => 'required',
-            'phone' => 'required|numeric'
+            'grade' => 'required|numeric'
         ]);
 
         $cart = json_decode($request->cookie('cart'), true);
@@ -96,11 +96,10 @@ class OrderController extends Controller
         DB::beginTransaction();
         try {
             $customer = Customer::firstOrCreate([
-                'email' => $request->email
+                'nis' => $request->nis
             ], [
                 'name' => $request->name,
-                'address' => $request->address,
-                'phone' => $request->phone
+                'grade' => $request->grade,
             ]);
 
             $order = Order::create([
@@ -109,6 +108,10 @@ class OrderController extends Controller
                 'user_id' => auth()->user()->id,
                 'total' => array_sum(array_column($result, 'result'))
             ]);
+
+            foreach ($result as $key => $row) {
+                DB::table('products')->where('id', $key)->decrement('stock', $row['qty']);
+            }
 
             foreach ($result as $key => $row) {
                 $order->order_detail()->create([
@@ -147,8 +150,10 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         $customers = Customer::orderBy('name', 'ASC')->get();
-        $users = User::role('kasir')->orderBy('name', 'ASC')->get();
+        $users = User::role('siswacec')->orderBy('name', 'ASC')->get();
         $orders = Order::orderBy('created_at', 'DESC')->with('order_detail', 'customer');
+        $order_details = Order_detail::orderBy('created_at', 'DESC')->with('order', 'product');
+        $products = Product::orderBy('id', 'ASC');
 
         if (!empty($request->customer_id)) {
             $orders = $orders->where('customer_id', $request->customer_id);
@@ -167,8 +172,20 @@ class OrderController extends Controller
             $end_date = Carbon::parse($request->end_date)->format('Y-m-d') . ' 23:59:59';
 
             $orders = $orders->whereBetween('created_at', [$start_date, $end_date])->get();
+            $order_details = $order_details->whereBetween('created_at', [$start_date, $end_date])->get();
+            $products = $products->whereBetween('created_at', [$start_date, $end_date])->get();
         } else {
             $orders = $orders->take(10)->skip(0)->get();
+            $order_details = $order_details->take(10)->skip(0)->get();
+            $products = $products->take(10)->skip(0)->get();
+        }
+
+        $qty = array();
+        foreach ($order_details as $row) {
+            $qty[$row->product->name] = 0;
+        }
+        foreach ($order_details as $row) {
+            $qty[$row->product->name] += $row->qty;
         }
 
         return view('orders.index', [
@@ -177,7 +194,10 @@ class OrderController extends Controller
             'total' => $this->countTotal($orders),
             'total_customer' => $this->countCustomer($orders),
             'customers' => $customers,
-            'users' => $users
+            'users' => $users,
+            'order_details' => $order_details,
+            'qty' => $qty,
+            'products' => $products
         ]);
     }
 
@@ -186,7 +206,7 @@ class OrderController extends Controller
         $customer = [];
         if ($orders->count() > 0) {
             foreach ($orders as $row) {
-                $customer[] = $row->customer->email;
+                $customer[] = $row->customer->nis;
             }
         }
         return count(array_unique($customer));

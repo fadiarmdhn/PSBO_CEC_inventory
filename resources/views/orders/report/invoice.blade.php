@@ -55,7 +55,7 @@
 </head>
 <body>
     <div class="header">
-        <h3>Point of Sales Daengweb.id</h3>
+        <h3>Cendekia Entrepreneur Club</h3>
         <h4 style="line-height: 0px;">Invoice: #{{ $order->invoice }}</h4>
         <p><small style="opacity: 0.5;">{{ $order->created_at->format('d-m-Y H:i:s') }}</small></p>
     </div>
@@ -67,14 +67,9 @@
                 <td>{{ $order->customer->name }}</td>
             </tr>
             <tr>
-                <th>No Telp</th>
+                <th>Kelas</th>
                 <td>:</td>
-                <td>{{ $order->customer->phone }}</td>
-            </tr>
-            <tr>
-                <th>Alamat</th>
-                <td>:</td>
-                <td>{{ $order->customer->address }}</td>
+                <td>{{ $order->customer->grade }}</td>
             </tr>
         </table>
     </div>

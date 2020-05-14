@@ -55,7 +55,7 @@
                         <div class="small-box bg-warning">
                             <div class="inner">
                                 <h3>{{ $customer }}</h3>
-                                <p>Pelanggan</p>
+                                <p>Pembeli</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-person-add"></i>
@@ -66,16 +66,13 @@
                         <div class="small-box bg-danger">
                             <div class="inner">
                                 <h3>{{ $user }}</h3>
-                                <p>Karyawan</p>
+                                <p>Pengurus</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-pie-graph"></i>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <canvas id="dw-chart"></canvas>
                 </div>
             </div>
         </section>

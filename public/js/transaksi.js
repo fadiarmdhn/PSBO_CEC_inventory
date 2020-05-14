@@ -360,7 +360,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
             qty: 1
         },
         customer: {
-            email: ''
+            nis: ''
         },
         shoppingCart: [],
         submitCart: false,
@@ -376,13 +376,12 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
                 this.getProduct();
             }
         },
-        'customer.email': function customerEmail() {
+        'customer.nis': function customerNis() {
             this.formCustomer = false;
             if (this.customer.name != '') {
                 this.customer = {
                     name: '',
-                    phone: '',
-                    address: ''
+                    grade: ''
                 };
             }
         }
@@ -469,7 +468,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
             var _this6 = this;
 
             __WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/api/customer/search', {
-                email: this.customer.email
+                nis: this.customer.nis
             }).then(function (response) {
                 if (response.data.status == 'success') {
                     _this6.customer = response.data.data;
@@ -483,7 +482,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
             this.errorMessage = '';
             this.message = '';
-            if (this.customer.email != '' && this.customer.name != '' && this.customer.phone != '' && this.customer.address != '') {
+            if (this.customer.nis != '' && this.customer.name != '' && this.customer.grade != '') {
                 this.$swal({
                     title: 'Kamu Yakin?',
                     text: 'Kamu Tidak Dapat Mengembalikan Tindakan Ini!',
@@ -512,8 +511,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
                                 _this7.message = response.data.message;
                                 _this7.customer = {
                                     name: '',
-                                    phone: '',
-                                    address: ''
+                                    grade: ''
                                 };
                                 _this7.submitForm = false;
                             }, 1000);

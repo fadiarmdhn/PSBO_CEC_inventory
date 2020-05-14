@@ -21,7 +21,7 @@ new Vue({
             qty: 1
         },
         customer: {
-            email: ''
+            nis: ''
         },
         shoppingCart: [],
         submitCart: false,
@@ -37,13 +37,12 @@ new Vue({
                 this.getProduct()
             }
         },
-        'customer.email': function() {
+        'customer.nis': function() {
             this.formCustomer = false
             if (this.customer.name != '') {
                 this.customer = {
                     name: '',
-                    phone: '',
-                    address: ''
+                    grade: ''
                 }
             }
         }
@@ -123,7 +122,7 @@ new Vue({
         },
         searchCustomer() {
             axios.post('/api/customer/search', {
-                email: this.customer.email
+                nis: this.customer.nis
             })
             .then((response) => {
                 if (response.data.status == 'success') {
@@ -139,7 +138,7 @@ new Vue({
         sendOrder() {
             this.errorMessage = ''
             this.message = ''
-            if (this.customer.email != '' && this.customer.name != '' && this.customer.phone != '' && this.customer.address != '') {
+            if (this.customer.nis != '' && this.customer.name != '' && this.customer.grade != '') {
                 this.$swal({
                     title: 'Kamu Yakin?',
                     text: 'Kamu Tidak Dapat Mengembalikan Tindakan Ini!',
@@ -167,8 +166,7 @@ new Vue({
                                 this.message = response.data.message
                                 this.customer = {
                                     name: '',
-                                    phone: '',
-                                    address: ''
+                                    grade: '',
                                 }
                                 this.submitForm = false
                             }, 1000)

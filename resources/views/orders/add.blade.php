@@ -45,7 +45,9 @@
                                                 class="form-control" required width="100%">
                                                 <option value="">Pilih</option>
                                                 @foreach ($products as $product)
-                                                <option value="{{ $product->id }}">{{ $product->code }} - {{ $product->name }}</option>
+                                                    @if ($product->stock >= 1)
+                                                        <option value="{{ $product->id }}">{{ $product->code }} - {{ $product->name }}</option>
+                                                    @endif
                                                 @endforeach
                                             </select>
                                         </div>

@@ -20,12 +20,8 @@
                 <td>{{ $order->customer->name }}</td>
             </tr>
             <tr>
-                <th>No Telp</th>
-                <td>{{ $order->customer->phone }}</td>
-            </tr>
-            <tr>
-                <th>Alamat</th>
-                <td>{{ $order->customer->address }}</td>
+                <th>Kelas</th>
+                <td>{{ $order->customer->grade }}</td>
             </tr>
         </table>
     </div>

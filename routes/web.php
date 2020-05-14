@@ -15,27 +15,35 @@ Route::get('/', function() {
 });
 Auth::routes();
 Route::group(['middleware' => 'auth'], function() {
-	Route::resource('/role', 'RoleController')->except([
-		'create', 'show', 'edit', 'update'
-	]);
+	Route::group(['middleware' => 'permission:manajemen-user'], function() {
+		Route::resource('/role', 'RoleController')->except([
+			'create', 'show', 'edit', 'update'
+		]);
+		Route::resource('/users', 'UserController')->except([
+			'show'
+		]);
+		Route::get('/users/roles/{id}', 'UserController@roles')->name('users.roles');
+		Route::put('/users/roles/{id}', 'UserController@setRole')->name('users.set_role');
+		Route::post('/users/permission', 'UserController@addPermission')->name('users.add_permission');
+		Route::get('/users/role-permission', 'UserController@rolePermission')->name('users.roles_permission');
+		Route::put('/users/permission/{role}', 'UserController@setRolePermission')->name('users.setRolePermission');
+	});
 	
-	Route::resource('/users', 'UserController')->except([
-		'show'
-	]);
-	Route::get('/users/roles/{id}', 'UserController@roles')->name('users.roles');
-	Route::put('/users/roles/{id}', 'UserController@setRole')->name('users.set_role');
-	Route::post('/users/permission', 'UserController@addPermission')->name('users.add_permission');
-	Route::get('/users/role-permission', 'UserController@rolePermission')->name('users.roles_permission');
-	Route::put('/users/permission/{role}', 'UserController@setRolePermission')->name('users.setRolePermission');
-	Route::resource('/kategori', 'CategoryController')->except([
-		'create', 'show'
-	]);
-	Route::resource('/produk', 'ProductController');
-	Route::get('/transaksi', 'OrderController@addOrder')->name('order.transaksi');
-	Route::get('/checkout', 'OrderController@checkout')->name('order.checkout');
-	Route::post('/checkout', 'OrderController@storeOrder')->name('order.storeOrder');
-	Route::get('/order', 'OrderController@index')->name('order.index');
-	Route::get('/order/pdf/{invoice}', 'OrderController@invoicePdf')->name('order.pdf');
-	Route::get('/order/excel/{invoice}', 'OrderController@invoiceExcel')->name('order.excel');
+	Route::group(['middleware' => ['permission:manajemen-produk']], function() {
+		Route::resource('/kategori', 'CategoryController')->except([
+			'create', 'show'
+		]);
+		Route::resource('/produk', 'ProductController');
+	});
+	Route::group(['middleware' => ['permission:menjalankan-transaksi']], function() {
+		Route::get('/transaksi', 'OrderController@addOrder')->name('order.transaksi');
+		Route::get('/checkout', 'OrderController@checkout')->name('order.checkout');
+		Route::post('/checkout', 'OrderController@storeOrder')->name('order.storeOrder');
+	});
+	Route::group(['middleware' => ['permission:manajemen-order']], function() {
+		Route::get('/order', 'OrderController@index')->name('order.index');
+		Route::get('/order/pdf/{invoice}', 'OrderController@invoicePdf')->name('order.pdf');
+		Route::get('/order/excel/{invoice}', 'OrderController@invoiceExcel')->name('order.excel');
+	});
 	Route::get('/home', 'HomeController@index')->name('home');
 });

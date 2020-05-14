@@ -61,7 +61,7 @@
                                                 @foreach ($customers as $cust)
                                                 <option value="{{ $cust->id }}"
                                                     {{ request()->get('customer_id') == $cust->id ? 'selected':'' }}>
-                                                    {{ $cust->name }} - {{ $cust->email }}
+                                                    {{ $cust->name }} - {{ $cust->nis }}
                                                 </option>
                                                 @endforeach
                                             </select>
@@ -135,7 +135,7 @@
                                         <tr>
                                             <th>Invoice</th>
                                             <th>Pelanggan</th>
-                                            <th>No Telp</th>
+                                            <th>Kelas</th>
                                             <th>Total Belanja</th>
                                             <th>Kasir</th>
                                             <th>Tgl Transaksi</th>
@@ -147,7 +147,7 @@
                                         <tr>
                                             <td><strong>#{{ $row->invoice }}</strong></td>
                                             <td>{{ $row->customer->name }}</td>
-                                            <td>{{ $row->customer->phone }}</td>
+                                            <td>{{ $row->customer->grade }}</td>
                                             <td>Rp {{ number_format($row->total) }}</td>
                                             <td>{{ $row->user->name }}</td>
                                             <td>{{ $row->created_at->format('d-m-Y H:i:s') }}</td>
@@ -172,6 +172,36 @@
                                     </tbody>
                                 </table>
                             </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nama Produk</th>
+                                            <th>Stok</th>
+                                            <th>Terjual</th>
+                                            <th>Harga</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @forelse ($products as $row)
+                                        <tr>
+                                            <td>{{ $row->name }}</td>
+                                            <td>{{ $row->stock }}</td>
+                                            <td>{{ $qty[$row->name] }}</td>
+                                            <td>Rp{{ number_format($row->price) }}</td>
+                                            <td>Rp{{ number_format($row->price * $qty[$row->name]) }}</td>
+                                        </tr>
+                                        @empty
+                                        <tr>
+                                            <td class="text-center" colspan="7">Tidak ada data transaksi</td>
+                                        </tr>
+                                        @endforelse
+                                    </tbody>
+                                </table>
+                            </div>
+
                             @slot('footer')
 
                             @endslot

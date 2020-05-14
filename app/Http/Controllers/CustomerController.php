@@ -10,10 +10,10 @@ class CustomerController extends Controller
     public function search(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|email'
+            'nis' => 'required'
         ]);
 
-        $customer = Customer::where('email', $request->email)->first();
+        $customer = Customer::where('nis', $request->nis)->first();
         if ($customer) {
             return response()->json([
                 'status' => 'success',
