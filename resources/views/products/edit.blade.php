@@ -71,14 +71,14 @@
                                     <p class="text-danger">{{ $errors->first('stock') }}</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Harga</label>
+                                    <label for="">Harga Jual</label>
                                     <input type="number" name="price" required 
                                         value="{{ $product->price }}"
                                         class="form-control {{ $errors->has('price') ? 'is-invalid':'' }}">
                                     <p class="text-danger">{{ $errors->first('price') }}</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Harga</label>
+                                    <label for="">Harga Pokok</label>
                                     <input type="number" name="purchase" required 
                                         value="{{ $product->purchase }}"
                                         class="form-control {{ $errors->has('purchase') ? 'is-invalid':'' }}">

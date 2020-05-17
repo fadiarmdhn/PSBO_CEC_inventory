@@ -72,7 +72,7 @@
                                     <p class="text-danger">{{ $errors->first('price') }}</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Harga Beli</label>
+                                    <label for="">Harga Pokok</label>
                                     <input type="number" name="purchase" required 
                                         class="form-control {{ $errors->has('purchase') ? 'is-invalid':'' }}">
                                     <p class="text-danger">{{ $errors->first('purchase') }}</p>

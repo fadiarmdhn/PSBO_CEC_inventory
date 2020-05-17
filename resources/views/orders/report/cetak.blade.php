@@ -76,7 +76,7 @@
                     <th>Stok</th>
                     <th>Terjual</th>
                     <th>Harga Jual</th>
-                    <th>Harga Beli</th>
+                    <th>Harga Pokok</th>
                     <th>Total Penjualan</th>
                     <th>Keuntungan</th>
                 </tr>

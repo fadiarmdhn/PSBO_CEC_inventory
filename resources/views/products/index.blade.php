@@ -48,7 +48,7 @@
                                             <th>Nama Produk</th>
                                             <th>Stok</th>
                                             <th>Harga Jual</th>
-                                            <th>Harga Beli</th>
+                                            <th>Harga Pokok</th>
                                             <th>Kategori</th>
                                             <th>Last Update</th>
                                             <th>Aksi</th>
