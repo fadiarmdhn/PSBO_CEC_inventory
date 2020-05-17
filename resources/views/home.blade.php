@@ -30,7 +30,7 @@
                         <div class="small-box bg-info">
                             <div class="inner">
                                 <h3>{{ $product }}</h3>
-                                <p>Produk</p>
+                                <p>Jenis Produk</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-bag"></i>
@@ -43,10 +43,10 @@
                         <div class="small-box bg-success">
                             <div class="inner">
                                 <h3>{{ $order }}</h3>
-                                <p>Pesanan</p>
+                                <p>Total Order</p>
                             </div>
                             <div class="icon">
-                                <i class="ion ion-stats-bars"></i>
+                                <i class="ion ion-pie-graph"></i>
                             </div>
                             
                         </div>
@@ -55,7 +55,7 @@
                         <div class="small-box bg-warning">
                             <div class="inner">
                                 <h3>{{ $customer }}</h3>
-                                <p>Pembeli</p>
+                                <p>Total Pembeli</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-person-add"></i>
@@ -66,13 +66,38 @@
                         <div class="small-box bg-danger">
                             <div class="inner">
                                 <h3>{{ $user }}</h3>
-                                <p>Pengurus</p>
+                                <p>Total Pengurus</p>
                             </div>
                             <div class="icon">
-                                <i class="ion ion-pie-graph"></i>
+                                <i class="ion ion-person-add"></i>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-6 col-6">
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>Rp {{ number_format($total) }}</h3>
+                                <p>Total Penjualan</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-stats-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-6">
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>Rp {{ number_format($profit) }}</h3>
+                                <p>Total Keuntungan</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-stats-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <canvas id="dw-chart"></canvas>
                 </div>
             </div>
         </section>

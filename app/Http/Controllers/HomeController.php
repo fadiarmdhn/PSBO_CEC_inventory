@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Customer;
 use App\Order;
+use App\Order_detail;
 use App\User;
 use Carbon\Carbon;
 use DB;
@@ -14,11 +15,41 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $orders = Order::all();
+        $products = Product::all();
+        $order_details = Order_detail::all();
+
         $product = Product::count();
         $order = Order::count();
         $customer = Customer::count();
         $user = User::count();
-        return view('home', compact('product', 'order', 'customer', 'user'));
+        
+        $total = 0;
+        if ($orders->count() > 0) {
+            $sub_total = $orders->pluck('total')->all();
+            $total = array_sum($sub_total);
+        }
+        
+        $profits = array();
+        $profit = 0;
+        foreach ($products as $row) {
+            $profits[$row->name] = 0;
+        }
+        foreach ($order_details as $row) {
+            $profits[$row->product->name] += ($row->product->price - $row->product->purchase) * $row->qty;
+        }
+        foreach ($products as $row) {
+            $profit += $profits[$row->name];
+        }
+
+        return view('home', [
+            'product' => $product,
+            'order' => $order,
+            'customer' => $customer,
+            'user' => $user,
+            'total' => $total,
+            'profit' => $profit
+        ]);
     }
 
     public function getChart()

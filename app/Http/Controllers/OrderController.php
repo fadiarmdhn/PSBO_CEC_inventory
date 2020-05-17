@@ -183,11 +183,23 @@ class OrderController extends Controller
         }
 
         $qty = array();
-        foreach ($order_details as $row) {
-            $qty[$row->product->name] = 0;
+        foreach ($products as $row) {
+            $qty[$row->name] = 0;
         }
         foreach ($order_details as $row) {
             $qty[$row->product->name] += $row->qty;
+        }
+
+        $profits = array();
+        $profit = 0;
+        foreach ($products as $row) {
+            $profits[$row->name] = 0;
+        }
+        foreach ($order_details as $row) {
+            $profits[$row->product->name] += ($row->product->price - $row->product->purchase) * $row->qty;
+        }
+        foreach ($products as $row) {
+            $profit += $profits[$row->name];
         }
 
         return view('orders.index', [
@@ -201,7 +213,8 @@ class OrderController extends Controller
             'qty' => $qty,
             'products' => $products,
             'start_date' => $start_date,
-            'end_date' => $end_date
+            'end_date' => $end_date,
+            'profit' => $profit
         ]);
     }
 

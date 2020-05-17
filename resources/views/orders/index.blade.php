@@ -94,7 +94,7 @@
                             @endslot
 
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="small-box bg-info">
                                         <div class="inner">
                                             <h3>{{ $sold }}</h3>
@@ -105,7 +105,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="small-box bg-success">
                                         <div class="inner">
                                             <h3>Rp {{ number_format($total) }}</h3>
@@ -116,11 +116,22 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="small-box bg-primary">
                                         <div class="inner">
                                             <h3>{{ $total_customer }}</h3>
                                             <p>Total pelanggan</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="ion ion-person-add"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="small-box bg-success">
+                                        <div class="inner">
+                                            <h3>Rp {{ number_format($profit) }}</h3>
+                                            <p>Total Keuntungan</p>
                                         </div>
                                         <div class="icon">
                                             <i class="ion ion-stats-bars"></i>
