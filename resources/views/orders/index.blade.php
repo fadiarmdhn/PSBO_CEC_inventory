@@ -172,6 +172,36 @@
                                     </tbody>
                                 </table>
                             </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nama Produk</th>
+                                            <th>Stok</th>
+                                            <th>Terjual</th>
+                                            <th>Harga</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @forelse ($products as $row)
+                                        <tr>
+                                            <td>{{ $row->name }}</td>
+                                            <td>{{ $row->stock }}</td>
+                                            <td>{{ $qty[$row->name] }}</td>
+                                            <td>Rp{{ number_format($row->price) }}</td>
+                                            <td>Rp{{ number_format($row->price * $qty[$row->name]) }}</td>
+                                        </tr>
+                                        @empty
+                                        <tr>
+                                            <td class="text-center" colspan="7">Tidak ada data transaksi</td>
+                                        </tr>
+                                        @endforelse
+                                    </tbody>
+                                </table>
+                            </div>
+
                             @slot('footer')
 
                             @endslot

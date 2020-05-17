@@ -44,7 +44,10 @@ Route::group(['middleware' => 'auth'], function() {
 		Route::get('/order', 'OrderController@index')->name('order.index');
 		Route::get('/order/pdf/{invoice}', 'OrderController@invoicePdf')->name('order.pdf');
 		Route::get('/order/excel/{invoice}', 'OrderController@invoiceExcel')->name('order.excel');
+<<<<<<< HEAD
 		Route::get('/order/cetak/{start_date}/{end_date}', 'OrderController@cetakPdf')->name('order.cetak');
+=======
+>>>>>>> b3446ec05950aaaf43ff5497f53ce259feb3e50f
 	});
 	Route::get('/home', 'HomeController@index')->name('home');
 });
