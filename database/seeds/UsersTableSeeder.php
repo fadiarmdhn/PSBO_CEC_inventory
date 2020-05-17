@@ -15,21 +15,21 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //Permission::create(['name' => 'manajemen-produk']);
-        //Permission::create(['name' => 'menjalankan-transaksi']);
-        //Permission::create(['name' => 'manajemen-order']);
-        //Permission::create(['name' => 'manajemen-user']);
-        //$role = Role::create(['name' => 'siswacec']);
-        //$role->givePermissionTo('manajemen-produk', 'menjalankan-transaksi');
-        //$role = Role::create(['name' => 'admin']);
-        //$role->givePermissionTo('manajemen-order', 'manajemen-user', 'manajemen-produk', 'menjalankan-transaksi');
-        //$user = User::create([
-        //    'name' => 'admin',
-        //    'email' => 'admin@cec.id',
-        //    'password' => bcrypt('secret'),
-        //    'status' => true
-        //]);
-        //$user->assignRole('admin');
+        Permission::create(['name' => 'manajemen-produk']);
+        Permission::create(['name' => 'menjalankan-transaksi']);
+        Permission::create(['name' => 'manajemen-order']);
+        Permission::create(['name' => 'manajemen-user']);
+        $role = Role::create(['name' => 'siswacec']);
+        $role->givePermissionTo('manajemen-produk', 'menjalankan-transaksi');
+        $role = Role::create(['name' => 'admin']);
+        $role->givePermissionTo('manajemen-order', 'manajemen-user', 'manajemen-produk', 'menjalankan-transaksi');
+        $user = User::create([
+            'name' => 'admin',
+            'email' => 'admin@cec.id',
+            'password' => bcrypt('secret'),
+            'status' => true
+        ]);
+        $user->assignRole('admin');
         Customer::create(['nis' => 171807001, 'name' => 'AFIF NIKOLAS ZAKARYYA', 'grade' => 9]);
         Customer::create(['nis' => 171807002, 'name' => 'AHMAD CHOIRI', 'grade' => 9]);
         Customer::create(['nis' => 171807003, 'name' => 'AHMAD DAFI', 'grade' => 9]);
