@@ -29,3 +29,13 @@ Sedangkan untuk pembina sendiri akan mengambil role sebagai admin pada sistem ya
 
 # Diagram
 ### Use Case
+![Use Case](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/usecaseCEC.png)
+
+### Activity Diagram
+![Activity Diagram](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/ActivityDiagram.png)
+
+### Class Diagram
+![Class Diagram](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/classdiagramSM.png)
+
+
+
