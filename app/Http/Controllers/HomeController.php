@@ -8,6 +8,7 @@ use App\Customer;
 use App\Order;
 use App\Order_detail;
 use App\User;
+use App\Cost;
 use Carbon\Carbon;
 use DB;
 
@@ -18,6 +19,7 @@ class HomeController extends Controller
         $orders = Order::all();
         $products = Product::all();
         $order_details = Order_detail::all();
+        $costs = Cost::all();
 
         $product = Product::count();
         $order = Order::count();
@@ -42,13 +44,23 @@ class HomeController extends Controller
             $profit += $profits[$row->name];
         }
 
+        $operational = 0;
+        if ($costs->count() > 0) {
+            $sub_total = $costs->pluck('amount')->all();
+            $operational = array_sum($sub_total);
+        }
+        
+        $net = $profit - $operational;
+
         return view('home', [
             'product' => $product,
             'order' => $order,
             'customer' => $customer,
             'user' => $user,
             'total' => $total,
-            'profit' => $profit
+            'profit' => $profit,
+            'operational' => $operational,
+            'net' => $net
         ]);
     }
 

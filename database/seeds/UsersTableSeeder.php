@@ -19,10 +19,11 @@ class UsersTableSeeder extends Seeder
         Permission::create(['name' => 'menjalankan-transaksi']);
         Permission::create(['name' => 'manajemen-order']);
         Permission::create(['name' => 'manajemen-user']);
+        Permission::create(['name' => 'manajemen-operasional']);
         $role = Role::create(['name' => 'siswacec']);
         $role->givePermissionTo('manajemen-produk', 'menjalankan-transaksi');
         $role = Role::create(['name' => 'admin']);
-        $role->givePermissionTo('manajemen-order', 'manajemen-user', 'manajemen-produk', 'menjalankan-transaksi');
+        $role->givePermissionTo('manajemen-order', 'manajemen-user', 'manajemen-produk', 'menjalankan-transaksi', 'manajemen-operasional');
         $user = User::create([
             'name' => 'admin',
             'email' => 'admin@cec.id',

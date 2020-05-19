@@ -78,7 +78,7 @@
                     <th>Harga Jual</th>
                     <th>Harga Pokok</th>
                     <th>Total Penjualan</th>
-                    <th>Keuntungan</th>
+                    <th>Laba/Rugi Kotor</th>
                 </tr>
             </thead>
             <tbody>

@@ -53,6 +53,17 @@
                 </li>
                 @endif
 
+                @if (auth()->user()->can('manajemen-operasional'))
+                <li class="nav-item has-treeview">
+                    <a href="{{ route('biaya.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-dollar"></i>
+                        <p>
+                            Biaya Operasional
+                        </p>
+                    </a>
+                </li>
+                @endif
+
                 @if (auth()->user()->can('menjalankan-transaksi'))
                 <li class="nav-item">
                     <a href="{{ route('order.transaksi') }}" class="nav-link">

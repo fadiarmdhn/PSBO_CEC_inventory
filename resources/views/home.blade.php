@@ -73,7 +73,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-6">
+                    <div class="col-lg-3 col-6">
                         <div class="small-box bg-info">
                             <div class="inner">
                                 <h3>Rp {{ number_format($total) }}</h3>
@@ -84,11 +84,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-6">
+                    <div class="col-lg-3 col-6">
                         <div class="small-box bg-success">
                             <div class="inner">
                                 <h3>Rp {{ number_format($profit) }}</h3>
-                                <p>Total Keuntungan</p>
+                                <p>Laba/Rugi Kotor</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-stats-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>Rp {{ number_format($operational) }}</h3>
+                                <p>Biaya Operasional</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-stats-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>Rp {{ number_format($net) }}</h3>
+                                <p>Laba/Rugi Bersih</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>

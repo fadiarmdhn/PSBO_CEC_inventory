@@ -109,7 +109,7 @@
                                     <div class="small-box bg-success">
                                         <div class="inner">
                                             <h3>Rp {{ number_format($total) }}</h3>
-                                            <p>Total Omset</p>
+                                            <p>Total Penjualan</p>
                                         </div>
                                         <div class="icon">
                                             <i class="ion ion-stats-bars"></i>
@@ -120,7 +120,7 @@
                                     <div class="small-box bg-primary">
                                         <div class="inner">
                                             <h3>{{ $total_customer }}</h3>
-                                            <p>Total pelanggan</p>
+                                            <p>Total Pelanggan</p>
                                         </div>
                                         <div class="icon">
                                             <i class="ion ion-person-add"></i>
@@ -131,7 +131,7 @@
                                     <div class="small-box bg-success">
                                         <div class="inner">
                                             <h3>Rp {{ number_format($profit) }}</h3>
-                                            <p>Total Keuntungan</p>
+                                            <p>Laba / Rugi Kotor</p>
                                         </div>
                                         <div class="icon">
                                             <i class="ion ion-stats-bars"></i>
@@ -205,7 +205,7 @@
                                             <th>Harga Jual</th>
                                             <th>Harga Pokok</th>
                                             <th>Total Penjualan</th>
-                                            <th>Keuntungan</th>
+                                            <th>Laba/Rugi Kotor</th>
                                         </tr>
                                     </thead>
                                     <tbody>

@@ -35,6 +35,11 @@ Route::group(['middleware' => 'auth'], function() {
 		]);
 		Route::resource('/produk', 'ProductController');
 	});
+	Route::group(['middleware' => ['permission:manajemen-operasional']], function() {
+		Route::resource('/biaya', 'CostController')->except([
+			'create', 'show'
+		]);
+	});
 	Route::group(['middleware' => ['permission:menjalankan-transaksi']], function() {
 		Route::get('/transaksi', 'OrderController@addOrder')->name('order.transaksi');
 		Route::get('/checkout', 'OrderController@checkout')->name('order.checkout');
