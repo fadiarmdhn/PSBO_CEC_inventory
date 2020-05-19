@@ -57,11 +57,17 @@ Fitur ini hanya dapat digunakan oleh pembina (admin). Pada fitur ini, admin dapa
 
 # Konsep OOP yang digunakan
 Konsep OOP yang digunakan Sistem CEC Stock Management ini yaitu:
-- Inheritance
-- Encapsulation
-- Polymorphism
-- Class
-- Object
+### Objek
+Objek adalah entitas runtime dasar yang dapat diidentifikasi dalam OOP.
+### Class
+Kelas adalah struktur pembuatan tipe data yang ditentukan pengguna yang menampung seluruh kumpulan data suatu objek.
+### Encapsulation
+Encapsulation merupakan teknik untuk menjaga suatu proses program agar tidak dapat diakses secara sembarangan atau di intervensi oleh program lain.
+### Inheritance
+Inheritance atau Pewarisan/Penurunan adalah konsep pemrograman dimana sebuah class dapat menurunkan atribut dan method yang dimilikinya kepada class lain. Konsep inheritance digunakan untuk memanfaatkan fitur code reuse untuk menghindari duplikasi kode program.  
+### Polymorphism
+Polimorfisme adalah kemampuan suatu obyek untuk mempunyai lebih dari satu bentuk
+
 
 # Design Pattern
 ![Design Pattern](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/StockManagement.png)
