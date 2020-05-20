@@ -4,7 +4,7 @@ CEC sendiri bertujuan untuk melatih dan mengembangkan kemampuan anak-anak di bid
 CEC dibuka setiap hari sabtu dan minggu dengan anggota berjumlah 14 orang beserta 1 orang pembina yang akan bergantian menjaga kantin milik CEC.
 
 # Ruang Lingkup Pengembangan
-Stock Management System merupakan sistem yang dibangun untuk membantu anggota CEC dalam melakukan proses penyimpanan, pengendalian stock produk, serta pembukuan. Pada sistem ini, tidak menyediakan fitur untuk cek saldo dari masing-masing siswa.
+Stock Management System merupakan sistem yang dibangun untuk membantu anggota CEC dalam melakukan proses penyimpanan, pengendalian stock produk, serta pembukuan. Pada sistem ini, tidak menyediakan fitur untuk cek saldo dari masing-masing siswa dan hanya dapat digunakan dalam versi web.
 Secara garis besar, sistem ini (pembina maupun anggota CEC), dapat melakukan hal-hal sebagai berikut :
 - Manajemen produk (kategori dan produk)
 - Melakukan transaksi
