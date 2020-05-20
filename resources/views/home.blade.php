@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-6">
-                        <div class="small-box bg-info">
+                        <div class="small-box bg-warning">
                             <div class="inner">
                                 <h3>{{ $customer }}</h3>
                                 <p>Total Pembeli</p>
