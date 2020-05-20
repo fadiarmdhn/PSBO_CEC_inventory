@@ -23,7 +23,7 @@ Sedangkan untuk pembina sendiri akan mengambil role sebagai admin pada sistem ya
 ![Activity Diagram](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/ActivityDiagram.png)
 
 ### Class Diagram
-![Class Diagram](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/classdiagramSM.png)
+![Class Diagram](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Copy%20of%20classdiagramSM.png)
 
 # Fitur Umum
 Pada CEC Stock Management System ini terdapat beberapa fitur umum yang dapat digunakan baik oleh pembina maupun anggota dari CEC sendiri. Berikut adalah beberapa dari fitur tersebut
