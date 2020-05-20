@@ -99,11 +99,11 @@ Model merupakan salah satu komponen MVC yang berhubungan langsung dengan databas
 Contoh dalam projek kami: Kategori, Produk, Order, dan User
 
 # Developer dan Jobdesk
-Developer | Jobdesk
+Developer | Jobdesk | Deskripsi
 ------------ | -------------
-Muhammad Guntur | Backend
-Fadia Ramadhana | Frontend
-Meia Noer Muslimah | Frontend, Project Manager
-Bella Anggita Safitri | Frontend
-Fajar Yuda Apriliano | Backend
-Muhammad Alfin Khalidi | Backend
+Muhammad Guntur | Backend | Manajemen Kategori dan Produk, Manajemen Role dan User
+Fadia Ramadhana | Frontend | Dashboard, Manajemen Produk : Kategori, Manajemen Produk : Produk, Tampilan sidebar, Transaksi : Checkout
+Meia Noer Muslimah | Frontend, Project Manager | Transaksi, Biaya Operasional,  Manajemen order, Login
+Bella Anggita Safitri | Frontend | Manajemen Role : Role, Manajemen Role : Permission, Manajemen Role : User, Logout
+Fajar Yuda Apriliano | Backend | Transaksi, Biaya Operasional, Manajemen Order, Dashboard
+Muhammad Alfin Khalidi | Backend | Login Dan Middleware
