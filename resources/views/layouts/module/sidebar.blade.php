@@ -88,7 +88,7 @@
 
                 @if (auth()->user()->can('manajemen-user'))
                 <li class="nav-item has-treeview">
-                    <a href="#" class="{{ Request::segment(1) === '' ? 'nav-link active' : 'nav-link' }}">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-users"></i>
                         <p>
                             Manajemen Users
