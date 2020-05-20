@@ -35,6 +35,10 @@ Fitur ini dapat digunakan oleh pembina (admin) dan siswa sebagai pengurus CEC un
 Fitur ini dapat digunakan oleh pembina (admin) dan siswa sebagai pengurus CEC untuk melihat daftar produk yang dijual, mengedit, menambahkan produk-produk yang akan dijual di kantin CEC dengan identitas produk seperti kode produk, nama produk, deskripsi, stok harga, kategori, dan foto produk, serta menghapus record
 ![Manajemen Produk](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Produk.png)
 
+### Biaya Operasional
+Fitur ini hanya dapat digunakan oleh pembina (admin) untuk merekam pencatatan pengeluaran untuk keperluan yang dilakukan oleh kantin CEC.
+![Biaya Operasional](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Operasional.png)
+
 ### Transaksi
 Fitur ini dapat digunakan oleh pembina (admin) dan siswa sebagai pengurus CEC untuk merekam pencatatan produk yang keluar atau dibeli di kantin CEC. Melalui fitur ini juga, akan diperoleh informasi mengenai jumlah pendapatan
 ![Transaksi](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Transaksi.png)
