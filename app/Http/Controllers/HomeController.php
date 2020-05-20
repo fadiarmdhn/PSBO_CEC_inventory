@@ -23,8 +23,14 @@ class HomeController extends Controller
 
         $product = Product::count();
         $order = Order::count();
-        $customer = Customer::count();
         $user = User::count();
+
+        $customer = [];
+        if ($orders->count() > 0) {
+            foreach ($orders as $row) {
+                $customer[] = $row->customer->nis;
+            }
+        }
         
         $total = 0;
         if ($orders->count() > 0) {
@@ -55,7 +61,7 @@ class HomeController extends Controller
         return view('home', [
             'product' => $product,
             'order' => $order,
-            'customer' => $customer,
+            'customer' => count(array_unique($customer)),
             'user' => $user,
             'total' => $total,
             'profit' => $profit,
