@@ -53,7 +53,7 @@ Fitur ini hanya dapat digunakan oleh pembina (admin). Setelah menentukan role (p
 
 ### Manajemen User
 Fitur ini hanya dapat digunakan oleh pembina (admin). Pada fitur ini, admin dapat menambahkan, mengedit, dan menghapus user yang mengakses sistem dengan beberapa identitas seperti Nama, Email, Role, dan Status.
-![Manajemen User](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Users.png)
+![Manajemen User](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/User.png)
 
 # Konsep OOP yang digunakan
 Konsep OOP yang digunakan Sistem CEC Stock Management ini yaitu:
