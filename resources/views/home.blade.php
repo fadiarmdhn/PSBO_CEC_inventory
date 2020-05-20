@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-6">
-                        <div class="small-box bg-warning">
+                        <div class="small-box bg-info">
                             <div class="inner">
                                 <h3>{{ $customer }}</h3>
                                 <p>Total Pembeli</p>
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-6">
-                        <div class="small-box bg-danger">
+                        <div class="small-box bg-success">
                             <div class="inner">
                                 <h3>{{ $user }}</h3>
                                 <p>Total Pengurus</p>
@@ -117,9 +117,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <canvas id="dw-chart"></canvas>
                 </div>
             </div>
         </section>
