@@ -55,7 +55,7 @@
 </head>
 <body>
     <div class="header">
-        <h3>Cendekia Entrepreneur Club</h3>
+        <h3>Cendekia Corner</h3>
         <h4 style="line-height: 0px;">Laporan</h4>
         <p><small style="opacity: 0.5;">Dicetak : {{ now() }}</small></p>
     </div>

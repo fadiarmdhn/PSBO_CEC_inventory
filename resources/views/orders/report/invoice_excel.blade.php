@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="header">
-        <h3>Cendekia Entrepreneur Club</h3>
+        <h3>Cendekia Corner</h3>
         <h4 style="line-height: 0px;">Invoice: #{{ $order->invoice }}</h4>
         <p><small style="opacity: 0.5;">{{ $order->created_at->format('d-m-Y H:i:s') }}</small></p>
         <p></p>

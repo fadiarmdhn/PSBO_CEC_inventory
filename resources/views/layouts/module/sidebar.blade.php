@@ -3,7 +3,7 @@
     <a href="{{ route('home') }}" class="brand-link">
         <img src="{{ asset('AdminCEC/img/logobaznaswhite.png') }}" alt="CEC" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light" style="font-size:14px"><strong>Cendekia Entrepreneur Club</strong></span>
+        <span class="brand-text font-weight-light" style="font-size:20px"><strong>Cendekia Corner</strong></span>
     </a>
 
     <div class="sidebar">
