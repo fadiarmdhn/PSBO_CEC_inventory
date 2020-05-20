@@ -29,31 +29,31 @@ Sedangkan untuk pembina sendiri akan mengambil role sebagai admin pada sistem ya
 Pada CEC Stock Management System ini terdapat beberapa fitur umum yang dapat digunakan baik oleh pembina maupun anggota dari CEC sendiri. Berikut adalah beberapa dari fitur tersebut
 ### Manajemen Kategori
 Fitur ini dapat digunakan oleh pembina (admin) dan siswa sebagai pengurus CEC untuk menambahkan "kategori" dari produk-produk yang akan dijual di kantin CEC
-![Manajemen Kategori](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/psbo3.png)
+![Manajemen Kategori](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Kategori.png)
 
 ### Manajemen Produk
 Fitur ini dapat digunakan oleh pembina (admin) dan siswa sebagai pengurus CEC untuk melihat daftar produk yang dijual, mengedit, menambahkan produk-produk yang akan dijual di kantin CEC dengan identitas produk seperti kode produk, nama produk, deskripsi, stok harga, kategori, dan foto produk, serta menghapus record
-![Manajemen Produk](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/psbo4.png)
+![Manajemen Produk](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Produk.png)
 
 ### Transaksi
 Fitur ini dapat digunakan oleh pembina (admin) dan siswa sebagai pengurus CEC untuk merekam pencatatan produk yang keluar atau dibeli di kantin CEC. Melalui fitur ini juga, akan diperoleh informasi mengenai jumlah pendapatan
-![Transaksi](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/psbo5.png)
+![Transaksi](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Transaksi.png)
 
 ### Manajemen Order
 Fitur ini hanya dapat digunakan oleh pembina (admin). Pada laman ini terdapat informasi mengenai jumlah item yang terjual, total omset, total pelanngan, dan total keuntungan. Kemudian, admin dapat melihat history dari data transaksi yang telah dilakukan. Admin juga dapat mencetak report yang dilengkapi dengan fitur filter data transaksi berdasarkan tanggal mulai dan tanggal akhir, identitas pelanggan, maupun identitas yang menjaga kasir
-![Mmanajemen Order](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/psbo6.png)
+![Mmanajemen Order](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Order.png)
 
 ### Manajemen Role
 Fitur ini hanya dapat digunakan oleh pembina (admin). Fitur ini memungkinkan admin untuk melihat daftar, menambahkan, dan menghapus role (peran) dari setiap pengurus CEC.
-![Manajemen Role](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/psbo7.png)
+![Manajemen Role](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Role.png)
 
 ### Role Permission
 Fitur ini hanya dapat digunakan oleh pembina (admin). Setelah menentukan role (peran) apa saja yang terdapat pada CEC, admin dapat mengatur task atau fitur apa saja yang dapat sebuah role kerjakan pada sistem
-![Role Permission](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/psbo8.png)
+![Role Permission](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Permission.png)
 
 ### Manajemen User
 Fitur ini hanya dapat digunakan oleh pembina (admin). Pada fitur ini, admin dapat menambahkan, mengedit, dan menghapus user yang mengakses sistem dengan beberapa identitas seperti Nama, Email, Role, dan Status.
-![Manajemen User](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/psbo9.png)
+![Manajemen User](https://github.com/fadiarmdhn/PSBO_CEC_inventory/blob/master/Diagrams/Screenshot%20Pages/Users.png)
 
 # Konsep OOP yang digunakan
 Konsep OOP yang digunakan Sistem CEC Stock Management ini yaitu:
